@@ -74,7 +74,7 @@ public class SettingActivity extends BaseActivity{
 		
 		public void updateValue (Contact contact) {
 			if (img_contact != null) {
-				img_contact.loadImage(contact.profile_pic_url, R.drawable.def_contacts_icon, false, null);
+				mHolder.img_contact.loadImage(contact.profile_pic_key, "" + contact.id, R.drawable.def_contacts_icon, false, null);
 			}
 			if (name != null) {
 				name.setText(contact.name);

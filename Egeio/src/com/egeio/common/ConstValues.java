@@ -46,6 +46,8 @@ public class ConstValues {
 	
 	public static final String MESSAGE = "message";
 	
+	public static final String GETPICS = "/user/pic_download";
+	
 	// bundle const value
 	public static final String LAYOUT_ID = "layoutID";
 	

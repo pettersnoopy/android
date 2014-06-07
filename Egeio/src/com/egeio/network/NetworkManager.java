@@ -29,7 +29,7 @@ public class NetworkManager {
 	
 	private String api_key = "37e359bba6b45e2cd91ac2ca2c7adb47";
 	
-	private String mAuth = null;
+	private static String mAuth = null;
 	
 	private Gson mGson;
 	
@@ -46,6 +46,10 @@ public class NetworkManager {
 	public NetworkManager (Context context) {
 		mContext = context;
 		mGson = new Gson();
+	}
+	
+	public static String getToken() {
+		return mAuth;
 	}
 	
 	public boolean isLogined() {

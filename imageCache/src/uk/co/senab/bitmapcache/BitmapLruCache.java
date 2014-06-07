@@ -361,6 +361,10 @@ public class BitmapLruCache {
 
         CacheableBitmapDrawable d = new CacheableBitmapDrawable(url, mResources, bitmap,
                 mRecyclePolicy, CacheableBitmapDrawable.SOURCE_UNKNOWN);
+        
+        if (bitmap == null) {
+        	return d;
+        }
 
         if (null != mMemoryCache) {
             mMemoryCache.put(d);

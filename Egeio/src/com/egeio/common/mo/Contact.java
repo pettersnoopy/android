@@ -26,6 +26,6 @@ public class Contact implements Serializable{
 	
 	public String space_used;
 	
-	public String profile_pic_url;
+	public String profile_pic_key;
 
 }

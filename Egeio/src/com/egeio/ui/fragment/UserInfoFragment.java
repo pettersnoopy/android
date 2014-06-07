@@ -94,8 +94,7 @@ public class UserInfoFragment extends BaseFragment {
 						public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 							if (position == 0) {
 								Intent intent = new Intent();
-								intent.setType("image/*");
-								intent.setAction(Intent.ACTION_GET_CONTENT);
+								intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 								startActivityForResult(intent, ConstValues.Request_photo_select);
 							} else {
 								Utils.camera(UserInfoFragment.this, ConstValues.Request_Camera_Upload);
@@ -113,7 +112,7 @@ public class UserInfoFragment extends BaseFragment {
 
 		public void updateValue(Contact contact) {
 			if (img_contact != null) {
-				img_contact.loadImage(contact.profile_pic_url, R.drawable.def_contacts_icon, false, null);
+				img_contact.loadImage(contact.profile_pic_key, String.valueOf(contact.id), R.drawable.def_contacts_icon, false, null);
 			}
 			if (name != null) {
 				name.setText(contact.name);
@@ -172,14 +171,14 @@ public class UserInfoFragment extends BaseFragment {
 					@Override
 					public boolean done(int code, Bundle result) {
 						final String downloadurl = result.getString(ConstValues.DOWNLOAD_URL);
-						if (downloadurl != null) {
+						if (mContact != null && downloadurl != null) {
 							mActivity.runOnUiThread(new Runnable() {
 								@Override
 								public void run() {
 									// for test
 									Utils.showToast(mActivity, "更新头像成功");
 
-									mHolder.img_contact.loadImage(downloadurl, R.drawable.def_contacts_icon, false, null);
+									mHolder.img_contact.loadImage(downloadurl, "" + mContact.id, R.drawable.def_contacts_icon, false, null);
 								}
 							});
 						}
@@ -199,13 +198,13 @@ public class UserInfoFragment extends BaseFragment {
 							@Override
 							public boolean done(int code, Bundle result) {
 								final String downloadurl = result.getString(ConstValues.DOWNLOAD_URL);
-								if (downloadurl != null) {
+								if (mContact != null && downloadurl != null) {
 									mActivity.runOnUiThread(new Runnable() {
 										@Override
 										public void run() {
 											// for test
 											Utils.showToast(mActivity, "更新头像成功");
-											mHolder.img_contact.loadImage(downloadurl, R.drawable.def_contacts_icon, false, null);
+											mHolder.img_contact.loadImage(downloadurl, "" + mContact.id, R.drawable.def_contacts_icon, false, null);
 										}
 									});
 								}

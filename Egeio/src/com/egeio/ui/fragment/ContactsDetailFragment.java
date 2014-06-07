@@ -51,7 +51,7 @@ public class ContactsDetailFragment extends BaseFragment{
 				email_addr.setText(contact.login);
 			}
 			if (img_contact != null) {
-				img_contact.loadImage(contact.profile_pic_url, R.drawable.def_contacts_icon,false, null);
+				img_contact.loadImage(contact.profile_pic_key, String.valueOf(contact.id), R.drawable.def_contacts_icon,false, null);
 			}
 		}
 

@@ -17,6 +17,7 @@
 package com.egeio.common.view;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
@@ -32,7 +33,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.RejectedExecutionException;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+
 import com.egeio.EgeioApplication;
+import com.egeio.common.ConstValues;
+import com.egeio.network.NetworkManager;
+import com.egeio.utils.NetUtils;
 
 import uk.co.senab.bitmapcache.BitmapLruCache;
 import uk.co.senab.bitmapcache.CacheableBitmapDrawable;
@@ -50,6 +58,12 @@ public class NetworkedCacheableImageView extends CacheableImageView {
 
 	public interface OnImageLoadedListener {
 		void onImageLoaded(CacheableBitmapDrawable result);
+	}
+	
+	public static String key2url(String key, String userID) {
+		String url;
+		url = ConstValues.SERVER + ConstValues.GETPICS + "/" + userID + "?auth_token=" + NetworkManager.getToken() + "&profile_pic_key=" + key;
+		return url;
 	}
 
 	/**
@@ -90,11 +104,20 @@ public class NetworkedCacheableImageView extends CacheableImageView {
 					Log.d("ImageUrlAsyncTask", "Downloading: " + url);
 
 					// The bitmap isn't cached so download from the web
-					HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-					InputStream is = new BufferedInputStream(conn.getInputStream());
+					String url_2 = key2url(params[0], params[1]);
+					//String url_2 = ConstValues.SERVER + ConstValues.GETPICS + "/" + userID + "?auth_token=" + NetworkManager.getToken() + "&profile_pic_key=" + url;
+					HttpClient client = NetUtils.getHttpClient();
+					HttpGet getMethod = new HttpGet(url_2);
+					HttpResponse response = client.execute(getMethod);
+					Bitmap bitmap = null;
+					int res = response.getStatusLine().getStatusCode();
+					if (res == 200) {
+						InputStream is = response.getEntity().getContent();
+						bitmap = BitmapFactory.decodeStream(is);
+					}
 
 					// Add to cache
-					result = mCache.put(url, is, mDecodeOpts);
+					result = mCache.put(url_2, bitmap);
 				} else {
 					Log.d("ImageUrlAsyncTask", "Got from Cache: " + url);
 				}
@@ -146,11 +169,13 @@ public class NetworkedCacheableImageView extends CacheableImageView {
 	 *            - Whether the image should be kept at the original size
 	 * @return true if the bitmap was found in the cache
 	 */
-	public boolean loadImage(String url, int res, final boolean fullSize, OnImageLoadedListener listener) {
+	public boolean loadImage(String key, String userID, int res, final boolean fullSize, OnImageLoadedListener listener) {
 		// First check whether there's already a task running, if so cancel it
 		if (null != mCurrentTask) {
 			mCurrentTask.cancel(true);
 		}
+		
+		String url = key2url(key, userID);
 
 		// Check to see if the memory cache already has the bitmap. We can
 		// safely do
@@ -181,7 +206,7 @@ public class NetworkedCacheableImageView extends CacheableImageView {
 				// } else {
 				// mCurrentTask.execute(url);
 				// }
-				mCurrentTask.execute(url);
+				mCurrentTask.execute(key, userID);
 			} catch (RejectedExecutionException e) {
 				// This shouldn't happen, but might.
 			}

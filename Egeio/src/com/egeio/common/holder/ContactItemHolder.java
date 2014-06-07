@@ -62,7 +62,7 @@ public class ContactItemHolder extends BaseViewHolder{
 		}
 		
 		if (mImgContact != null) {
-			mImgContact.loadImage(contact.profile_pic_url, R.drawable.def_contacts_icon,false, null);
+			mImgContact.loadImage(contact.profile_pic_key, "" + contact.id, R.drawable.def_contacts_icon,false, null);
 		}
 	}
 	

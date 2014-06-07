@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/lay_search"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_text_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/btnsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/icon_search_gray" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnsearch"
+            android:layout_alignTop="@+id/btnsearch"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@+id/btnsearch"
+            android:background="@color/wl_gray" />
+
+        <ImageButton
+            android:id="@+id/deletesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/icon_close"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/searchkeyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/deletesearch"
+            android:layout_toRightOf="@+id/btnsearch"
+            android:background="@color/transparent"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/search_bar" />
+    </RelativeLayout>
+
+    <!--
+    <EditText
+        android:id="@id/searchbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Search"
+        android:singleLine="true"
+        android:padding="@dimen/common_5dp">
+        <requestFocus />
+    </EditText>
+    -->
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_search"
+        android:background="@color/transparent" >
+    </ListView>
+
+</RelativeLayout>

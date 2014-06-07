@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_small_border" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@id/title_name"
+                style="@style/Text.dialog_title"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/boldText"
+                style="@style/Text.Body.font.large.bold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoLink="all"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/plainText"
+                style="@style/Text.Body.font.large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:autoLink="all"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <!-- android:background="@color/edit_text" |center_horizontal -->
+            <!--
+            <Button 
+            android:layout_width="wrap_content"
+	      	android:layout_height="wrap_content"
+            android:visibility="visible" 
+            android:id="@+id/cancel_button" 
+            android:layout_marginRight="1dip"
+            style="@style/dialog_button_cancel" />
+            -->
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/button_white"
+                android:text="@string/common_cancel"
+                android:textSize="@dimen/button_textsize"
+                android:visibility="visible" >
+            </Button>
+
+            <Button
+                android:id="@+id/ok_button"
+                style="@style/button_red"
+                android:layout_marginLeft="7dip"
+                android:text="@string/common_continue"
+                android:textSize="@dimen/button_textsize"
+                android:visibility="visible" >
+            </Button>
+            <!--
+             <Button
+            android:id="@+id/ok_button"
+            style="@style/dialog_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

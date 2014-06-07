@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@id/grid_share_title"
+                style="@style/Text.Body.font.large.bold.black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="分享文件" />
+
+            <GridView
+                android:id="@id/grid_share_file"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_height" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" >
+
+                    <Button
+                        android:id="@id/back"
+                        style="@style/button_red"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/common_10dp"
+						android:text="@string/back"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:layout_centerInParent="true"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@id/titlebar_opt_name"
+                        style="@style/HeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+						android:text="@string/accessSet"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <Button
+                        android:id="@id/Share"
+                        style="@style/button_red"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/common_10dp"
+						android:text="@string/common_share"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Text.Body.font.large.bold.black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:drawableLeft="@drawable/group_contact"
+                android:text="访问范围" />
+
+            <ImageView
+                android:id="@id/line"
+                style="@style/fill_land_line"
+                android:layout_marginBottom="@dimen/common_10dp"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:background="@drawable/dashed_line_land" />
+
+            <RadioGroup
+                android:id="@id/radiogroup_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/group_share_marginleft"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@id/open_all"
+                    style="@style/share_radiobutton"
+                    android:paddingTop="@dimen/common_5dp"
+                    android:text="@string/share_openall" />
+
+                <RadioButton
+                    android:id="@id/open_group"
+                    style="@style/share_radiobutton"
+                    android:paddingTop="@dimen/common_16dp"
+                    android:text="@string/share_opengroup" />
+
+                <RadioButton
+                    android:id="@id/open_term"
+                    style="@style/share_radiobutton"
+                    android:paddingTop="@dimen/common_16dp"
+                    android:text="@string/share_openterm" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@id/line"
+                style="@style/fill_land_line"
+                android:layout_marginBottom="@dimen/common_10dp"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:background="@drawable/dashed_line_land" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/share_item_height"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img1"
+                    style="@style/style_icon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_download" />
+
+                <TextView
+                    style="@style/share_item_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:layout_toRightOf="@+id/img1"
+                    android:text="@string/downloadable" />
+
+                <CheckBox
+                    android:id="@id/downloadable"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_10dp"
+                    android:button="@drawable/checkbox_bg1" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@id/line"
+                style="@style/fill_land_line"
+                android:layout_marginBottom="@dimen/common_10dp"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:background="@drawable/dashed_line_land" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/share_item_height"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img2"
+                    style="@style/style_icon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_diedline" />
+
+                <TextView
+                    style="@style/share_item_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:layout_toRightOf="@+id/img2"
+                    android:text="@string/diedline" />
+
+                <TextView
+                    android:id="@id/died_line"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_10dp"
+                    android:text="@string/never" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@id/line"
+                style="@style/fill_land_line"
+                android:layout_marginBottom="@dimen/common_10dp"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:background="@drawable/dashed_line_land" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/share_item_height"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img3"
+                    style="@style/style_icon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_password" />
+
+                <TextView
+                    style="@style/share_item_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:layout_toRightOf="@+id/img3"
+                    android:text="@string/setpassword" />
+
+                <TextView
+                    android:id="@id/setpassword"
+                    style="@style/wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_10dp"
+                    android:button="@drawable/checkbox_bg1"
+                    android:text="@string/notset"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>

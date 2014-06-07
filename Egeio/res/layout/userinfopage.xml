@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout android:id="@id/lin_photo"
+            style="@style/match_width"
+            android:layout_marginBottom="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_30dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/match_width"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="头像"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.egeio.common.view.NetworkedCacheableImageView
+                android:id="@id/img_contact"
+                style="@style/icon_smaill"
+                android:layout_toLeftOf="@+id/arrow"
+                android:src="@drawable/def_contacts_icon" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                style="@style/right_arrow_style"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+    <RelativeLayout
+        android:id="@id/lin_name"
+        style="@style/match_width"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView android:id="@+id/tv_name"
+            style="@style/wrap_content"
+            android:layout_gravity="left"
+            android:text="名字"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/name"
+            style="@style/match_width"
+            android:layout_toLeftOf="@id/arrow"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            style="@style/right_arrow_style"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+    <RelativeLayout
+        android:id="@id/lin_phone"
+        style="@style/match_width"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView android:id="@+id/tv_phone"
+            style="@style/wrap_content"
+            android:layout_gravity="left"
+            android:text="手机"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/phone"
+            style="@style/match_width"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_toRightOf="@+id/tv_phone"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            style="@style/right_arrow_style"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+    <RelativeLayout
+        android:id="@id/lin_email"
+        style="@style/match_width"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView android:id="@+id/tv_email"
+            style="@style/wrap_content"
+            android:layout_gravity="left"
+            android:text="邮箱"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/email"
+            style="@style/match_width"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_toRightOf="@+id/tv_email"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            style="@style/right_arrow_style"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+</LinearLayout>

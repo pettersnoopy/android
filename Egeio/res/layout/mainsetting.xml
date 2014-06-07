@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ViewFlipper
+            android:id="@id/flipper"
+            style="@style/fill_parent" >
+            <LinearLayout
+                style="@style/fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:background="@color/bg_title_color"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/titlebar_height"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <TextView
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/transparent"
+                            android:text="@string/Setting"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/settingitem"/>
+ 
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:background="@color/bg_title_color"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@id/info_back_setting"
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/titlebar_icon_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/common_10dp"
+                            android:text="@string/Setting"
+							android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/titlebar_height"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <Button
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/transparent"
+                            android:textColor="@color/white"
+							android:text="@string/userinfo"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@id/userInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" >
+                </FrameLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:background="@color/bg_title_color"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@id/tran_back_setting"
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/titlebar_icon_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/common_10dp"
+                            android:text="@string/Setting" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/titlebar_height"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <Button
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/transparent"
+                            android:text="@string/tranList"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@id/transportList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" >
+                </FrameLayout>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="cancel" type="id">true</item>
+    <item name="commit" type="id">true</item>
+    
+    <item name="list" type="id">true</item>
+    <item name="username" type="id">true</item>
+    <item name="password" type="id">true</item>
+    <item name="repeat" type="id">true</item>
+
+    <!-- titlebar -->
+    <item name="titlebar" type="id">true</item>
+    <item name="lay_titlebar" type="id"></item>
+    <item name="opt_select" type="id">true</item>
+    <item name="opt_select_right" type="id">true</item>
+    <item name="opt_select_left" type="id">true</item>
+    <item name="titlebar_name" type="id">true</item>
+    <item name="titlebar_opt_name" type="id">true</item>
+    <item name="flipper" type="id">true</item>
+    <item name="pager" type="id">true</item>
+    <item name="back" type="id">true</item>
+
+    <!-- file list -->
+    <item name="img_filetype" type="id">true</item>
+    <item name="filename" type="id">true</item>
+    <item name="date" type="id">true</item>
+    <item name="time" type="id">true</item>
+    <item name="size" type="id">true</item>
+    <item name="list_status" type="id">true</item>
+    <item name="lin_status" type="id">true</item>
+    <item name="share" type="id">true</item>
+    <item name="delete" type="id">true</item>
+    <item name="mark" type="id">true</item>
+    <item name="rename" type="id">true</item>
+    <item name="view" type="id">true</item>
+    <item name="more" type="id">true</item>
+    <item name="down" type="id">true</item>
+    <item name="searchbox" type="id">true</item>
+    <item name="search" type="id">true</item>
+    <item name="filecountinfo" type="id">true</item>
+    <item name="tv_filecountinfo" type="id">true</item>
+    <item name="file_list" type="id">true</item>
+    <item name="contact_img" type="id">true</item>
+    <item name="icon_left_1" type="id">true</item>
+    <item name="icon_left_2" type="id">true</item>
+    <item name="icon_right_1" type="id">true</item>
+    <item name="icon_right_2" type="id">true</item>
+    <item name="msg_img" type="id">true</item>
+    <item name="message" type="id">true</item>
+    <item name="title" type="id">true</item>
+    <item name="msg_tag" type="id">true</item>
+    <item name="request_addmember" type="id">true</item>
+    <item name="request_rename" type="id">true</item>
+    <item name="comment" type="id">true</item>
+    <item name="filelists" type="id">true</item>
+    <item name="endpoint" type="id">true</item>
+    
+    <!-- base bar -->
+    <item name="AddFolder" type="id">true</item>
+    <item name="SendReview" type="id">true</item>
+    <item name="Viewer" type="id">true</item>
+    <item name="Delete" type="id">true</item>
+    <item name="Mark" type="id">true</item>
+    <item name="Share" type="id">true</item>
+    <item name="Rename" type="id">true</item>
+    <item name="Download" type="id">true</item>
+    <item name="Upload" type="id">true</item>
+    
+    <item name="album_thumb_layout" type="id">true</item>
+    <item name="album_item" type="id">true</item>
+    <item name="leftLayout" type="id">true</item>
+	<item name="album_arrow" type="id">true</item>
+	<item name="album_checkbox" type="id">true</item>
+	<item name="album_name" type="id">true</item>
+	<item name="album_photo_count" type="id">true</item>
+	<item name="album_thumb" type="id">true</item>
+	<item name="album_extra" type="id">true</item>
+	<item name="album_date" type="id">true</item>
+	<item name="album_time" type="id">true</item>
+	<item name="album_size" type="id">true</item>
+	
+	<!-- UPLOAD -->
+	<item name="line" type="id">true</item>
+	<item name="upload_btn_layout" type="id">true</item>
+	<item name="upload_image" type="id">true</item>
+	<item name="uploadText" type="id">true</item>
+	<item name="share_image" type="id">true</item>
+	<item name="shareText" type="id">true</item>
+	
+	<!-- DOWNLOAD -->
+	<item name="download_btn_layout" type="id">true</item>
+	<item name="download_image" type="id">true</item>
+	<item name="downloadText" type="id">true</item>
+	
+	<!-- MORE -->
+	<item name="more_btn_layout" type="id">true</item>
+	<item name="more_image" type="id">true</item>
+	<item name="moreText" type="id">true</item>
+	
+	<!-- TIPS -->
+	<item name="share_btn_layout" type="id">true</item>
+	<item name="shareBtnOk" type="id">true</item>
+	<item name="shareOK" type="id">true</item>
+	<item name="downloadOK" type="id">true</item>
+	<item name="fileOperateLayout" type="id">true</item>
+	
+	<item name="viewDelete" type="id">true</item>
+	<item name="deleteLayout" type="id">true</item>
+	<item name="textDelete" type="id">true</item>
+	<item name="shareLayout" type="id">true</item>
+	<item name="viewShare" type="id">true</item>
+	<item name="textShare" type="id">true</item>
+	<item name="downloadLayout" type="id">true</item>
+	<item name="viewDownload" type="id">true</item>
+	<item name="textDownload" type="id">true</item>
+	<item name="moreLayout" type="id">true</item>
+	<item name="viewMore" type="id">true</item>
+	<item name="textMore" type="id">true</item>
+	
+	<item name="grid_share_file" type="id">true</item>
+	<item name="grid_share_title" type="id">true</item>
+	
+	<item name="radiogroup_share" type="id">true</item>
+	<item name="open_all" type="id">true</item>
+	<item name="open_group" type="id">true</item>
+	<item name="open_term" type="id">true</item>
+	
+	<item name="downloadable" type="id">true</item>
+	<item name="died_line" type="id">true</item>
+	<item name="setpassword" type="id">true</item>
+	<item name="foldername" type="id">true</item>
+	
+	<item name="desc" type="id">true</item>
+	<item name="filepath" type="id">true</item>
+	
+	<item name="tel_name" type="id">true</item>
+	<item name="tel_number" type="id">true</item>
+	<item name="email_name" type="id">true</item>
+	<item name="email_addr" type="id">true</item>
+	<item name="img_contact" type="id">true</item>
+	<item name="contentList" type="id">true</item>
+	<item name="contentDetail" type="id">true</item>
+	<item name="detail_name" type="id">true</item>
+	<item name="back_contact" type="id">true</item>
+	<item name="transport" type="id">true</item>
+	<item name="setting" type="id">true</item>
+	<item name="phone" type="id">true</item>
+	<item name="lin_setting" type="id">true</item>
+	<item name="lin_transport" type="id">true</item>
+	<item name="userInfo" type="id">true</item>
+	<item name="email" type="id">true</item>
+	<item name="transportList" type="id">true</item>
+	
+	<item name="lin_userinfo" type="id">true</item>
+	<item name="info_back_setting" type="id">true</item>
+	<item name="tran_back_setting" type="id">true</item>
+	<item name="set_back_setting" type="id">true</item>
+	
+	<item name="lin_name" type="id">true</item>
+	<item name="lin_phone" type="id">true</item>
+	<item name="lin_email" type="id">true</item>
+	<item name="lin_photo" type="id">true</item>
+	
+	<item name="msgHos" type="id">true</item>
+	<item name="msgHos_image" type="id">true</item>
+	<item name="msgHos_text" type="id">true</item>
+	
+	<item name="ReView" type="id">true</item>
+	<item name="ReView_image" type="id">true</item>
+	<item name="ReView_text" type="id">true</item>
+	
+	<item name="Copy" type="id">true</item>
+	<item name="Copy_image" type="id">true</item>
+	<item name="Copy_text" type="id">true</item>
+	
+	<item name="Comment" type="id">true</item>
+	<item name="Comment_image" type="id">true</item>
+	<item name="Comment_text" type="id">true</item>
+	
+	<item name="audio_comment" type="id">true</item>
+	<item name="comment_msg" type="id">true</item>
+	<item name="edit_comment" type="id">true</item>
+	<item name="audio_msg" type="id">true</item>
+	
+	<item name="lin_audio_input" type="id">true</item>
+	<item name="lin_text_input" type="id">true</item>
+	
+	<item name="text_send" type="id">true</item>
+	<item name="audio_send" type="id">true</item>
+	<item name="content" type="id">true</item>
+	<item name="conent_comment" type="id">true</item>
+	<item name="lin_list" type="id">true</item>
+	
+</resources>

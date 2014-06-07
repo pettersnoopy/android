@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/fileinfo_menu_height"
+    android:background="@color/bg_filelist_child_item"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/common_5dp"
+    android:paddingTop="@dimen/common_5dp" >
+
+    <LinearLayout
+        android:id="@id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/share" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_share" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/delete" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_delete" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/mark" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_mark" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/rename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/rename" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_rename" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/view" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_view" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/down" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_share" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            style="@style/img_list_menu"
+            android:layout_gravity="center"
+            android:src="@drawable/more" />
+
+        <TextView
+            style="@style/Text.Body.font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_share" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

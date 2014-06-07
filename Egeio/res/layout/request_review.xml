@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_5dp"
+        android:gravity="left"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@id/file_list"
+            style="@style/Text.Body.font.large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:text="John Smith的简历等三个文件" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/review_request_name_height" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:src="@drawable/review_request_name" />
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:gravity="center_vertical"
+            android:text="命名" />
+
+        <EditText
+            android:id="@id/request_rename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.egeio.common.view.RequestReview
+            android:id="@id/request_addmember"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lin1" />
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/review_request_name_height"
+                android:layout_marginTop="@dimen/common_10dp" >
+
+                <EditText
+                    android:id="@id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:layout_marginRight="@dimen/common_10dp"
+                    android:hint="@string/commit_hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/dashed_line_land" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/review_request_name_height"
+                android:layout_marginTop="@dimen/common_10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:src="@drawable/clock" />
+
+                <TextView
+                    style="@style/HeaderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:gravity="center_vertical"
+                    android:text="截止日期" />
+
+                <TextView
+                    android:id="@id/endpoint"
+                    style="@style/HeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:layout_marginRight="@dimen/common_10dp"
+                    android:gravity="right|center_vertical"
+                    android:text="无" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

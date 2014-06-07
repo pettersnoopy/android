@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginBottom="@dimen/common_30dp"
+                android:layout_marginTop="@dimen/common_30dp"
+                android:orientation="horizontal" >
+
+                <com.egeio.common.view.NetworkedCacheableImageView
+                    android:id="@id/img_contact"
+                    style="@style/icon_smaill"
+                    android:src="@drawable/def_contacts_icon" />
+
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@id/name"
+                        style="@style/match_width"
+                        android:layout_gravity="left"
+                        android:text="andy"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@id/group"
+                        style="@style/match_width"
+                        android:layout_gravity="left"
+                        android:text="tel"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/line"
+            style="@style/fill_land_line"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:background="@drawable/dashed_line_land" />
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@id/tel_name"
+                style="@style/match_width"
+                android:layout_gravity="left"
+                android:text="移动"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@id/tel_number"
+                style="@style/match_width"
+                android:layout_gravity="left"
+                android:text="tel"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/line"
+            style="@style/fill_land_line"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/dashed_line_land" />
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@id/email_name"
+                style="@style/match_width"
+                android:layout_gravity="left"
+                android:text="邮箱"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@id/email_addr"
+                style="@style/match_width"
+                android:layout_gravity="left"
+                android:text="tel"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/line"
+            style="@style/fill_land_line"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/dashed_line_land" />
+ 
+    </LinearLayout>
+    <include
+        android:layout_gravity="center"
+        layout="@layout/loading"
+		android:visibility="gone"/>
+
+</FrameLayout>

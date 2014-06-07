@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!--   
+    根标签为animation-list，其中oneshot代表着是否只展示一遍，设置为false会不停的循环播放动画  
+    根标签下，通过item标签对动画中的每一个图片进行声明  
+    android:duration 表示展示所用的该图片的时间长度  
+ -->  
+<animation-list  
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  android:oneshot="true">
+    
+    <item android:drawable="@drawable/amp7" android:duration="100"></item>  
+    <item android:drawable="@drawable/amp6" android:duration="100"></item>  
+    <item android:drawable="@drawable/amp5" android:duration="100"></item>
+    <item android:drawable="@drawable/amp4" android:duration="100"></item>
+    <item android:drawable="@drawable/amp3" android:duration="100"></item>
+    <item android:drawable="@drawable/amp2" android:duration="100"></item>
+    <item android:drawable="@drawable/amp1" android:duration="100"></item>
+    
+</animation-list> 

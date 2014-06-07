@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ViewFlipper android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom">
+        
+        <LinearLayout android:id="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+        <LinearLayout android:id="@id/conent_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+    </ViewFlipper>
+
+    <include android:id="@+id/bottom" 
+        android:layout_alignParentBottom="true" 
+        layout="@layout/viewer_menu_bottom"/>
+</RelativeLayout>

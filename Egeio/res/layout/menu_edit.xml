@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_width"
+    android:background="@drawable/menu_bottom_bg"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@id/deleteLayout"
+        style="@style/cloud_file_browser_menu_layout_btn"
+        android:layout_height="@dimen/menu_height_bottom"
+        android:background="@drawable/choices_more_item_bg" >
+
+        <ImageView
+            android:id="@id/viewDelete"
+            style="@style/file_edit_btn_img"
+            android:background="@drawable/file_delete"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@id/textDelete"
+            style="@style/wrap_content"
+            android:text="@string/common_delete"
+            android:textColor="@color/file_op"
+            android:textSize="11.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/shareLayout"
+        style="@style/cloud_file_browser_menu_layout_btn"
+        android:layout_height="@dimen/menu_height_bottom"
+        android:background="@drawable/choices_more_item_bg" >
+
+        <ImageView
+            android:id="@id/viewShare"
+            style="@style/file_edit_btn_img"
+            android:background="@drawable/file_share"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@id/textShare"
+            style="@style/wrap_content"
+            android:text="@string/common_share"
+            android:textColor="@color/file_op"
+            android:textSize="11.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/downloadLayout"
+        style="@style/cloud_file_browser_menu_layout_btn"
+        android:layout_height="@dimen/menu_height_bottom"
+        android:background="@drawable/choices_more_item_bg" >
+
+        <ImageView
+            android:id="@id/viewDownload"
+            style="@style/file_edit_btn_img"
+            android:background="@drawable/file_download"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@id/textDownload"
+            style="@style/wrap_content"
+            android:text="@string/common_download"
+            android:textColor="@color/file_op"
+            android:textSize="11.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/moreLayout"
+        style="@style/cloud_file_browser_menu_layout_btn"
+        android:layout_height="@dimen/menu_height_bottom"
+        android:background="@drawable/choices_more_item_bg" >
+
+        <ImageView
+            android:id="@id/viewMore"
+            style="@style/file_edit_btn_img"
+            android:background="@drawable/file_more"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@id/textMore"
+            style="@style/wrap_content"
+            android:text="@string/common_more"
+            android:textColor="@color/file_op"
+            android:textSize="11.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

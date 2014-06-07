@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/fill_width"
+        	android:background="@color/wheat"
+        	android:layout_marginLeft="@dimen/common_10dp"
+        	android:layout_marginRight="@dimen/common_10dp"
+        	android:gravity="center_vertical">
+        	
+        <TextView android:id="@id/filepath"
+            style="@style/wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="根目录"/>
+        
+    </LinearLayout>
+    
+    <ListView
+        android:id="@id/listView"
+        style="@style/fill_parent"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginRight="@dimen/common_10dp"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@drawable/dashed_line_land"
+        android:divider="@drawable/dashed_line_land"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>

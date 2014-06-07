@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout android:id="@id/lin_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginBottom="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_30dp"
+            android:orientation="horizontal" >
+
+            <com.egeio.common.view.NetworkedCacheableImageView
+                android:id="@id/img_contact"
+                style="@style/icon_smaill"
+                android:src="@drawable/def_contacts_icon" />
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginLeft="@dimen/common_10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/name"
+                    style="@style/match_width"
+                    android:layout_gravity="left"
+                    android:text="andy"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@id/phone"
+                    style="@style/match_width"
+                    android:layout_gravity="left"
+                    android:text="tel"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+    <LinearLayout android:id="@id/lin_transport"
+        style="@style/match_width"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            style="@style/style_icon"
+            android:layout_gravity="left"
+            android:src="@drawable/icon_download"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/transport"
+            style="@style/match_width"
+            android:layout_marginLeft="@dimen/common_20dp"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+			android:text="@string/transport"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+    <LinearLayout android:id="@id/lin_setting"
+        style="@style/match_width"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            style="@style/style_icon"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:src="@drawable/setting"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/setting"
+            style="@style/match_width"
+            android:layout_marginLeft="@dimen/common_20dp"
+            android:layout_gravity="left|center_vertical"
+            android:text="@string/setting"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/line"
+        style="@style/fill_land_line"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:layout_marginLeft="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/dashed_line_land" />
+
+</LinearLayout>

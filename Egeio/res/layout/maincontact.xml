@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ViewFlipper
+            android:id="@id/flipper"
+            style="@style/fill_parent" >
+            <LinearLayout
+                style="@style/fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:background="@color/bg_title_color"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/titlebar_height"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <TextView
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/transparent"
+                            android:text="@string/Contacts"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@id/contentList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" >
+                </FrameLayout>
+ 
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:background="@color/bg_title_color"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@id/back_contact"
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/titlebar_icon_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/common_10dp"
+                            android:text="@string/Contacts" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/titlebar_height"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@id/detail_name"
+                            style="@style/HeaderText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/transparent"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@id/contentDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" >
+                </FrameLayout>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading"
+        android:visibility="gone" />
+
+</FrameLayout>

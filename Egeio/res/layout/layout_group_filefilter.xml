@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/lin_fileitem_height"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@id/img_filetype"
+        android:layout_width="@dimen/titlebar_filetype_width"
+        android:layout_height="@dimen/titlebar_filetype_height"
+        android:layout_gravity="center"
+        android:src="@drawable/file_director" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/titlebar_fileinfo_leftmargin"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lin_filename_height" >
+
+            <TextView
+                android:id="@id/filename"
+                style="@style/style_title_name_little"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lin1"
+            android:layout_marginTop="@dimen/lin_fileinfo_margintop"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/date"
+                style="@style/textinfo_little_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@id/time"
+                style="@style/textinfo_little_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fileinfo_marginleft"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@id/size"
+                style="@style/textinfo_little_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fileinfo_marginleft"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

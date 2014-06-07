@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_parent"
+    android:layout_toLeftOf="@id/line"
+    android:background="@drawable/bottom_btn_bg"
+    android:gravity="center"
+	android:orientation="vertical">
+
+    <ImageView
+        android:id="@id/share_image"
+        style="@style/file_edit_btn_img"
+        android:src="@drawable/menu_share" />
+
+    <TextView
+        android:id="@id/shareText"
+        style="@style/file_edit_text"
+        android:text="@string/common_share" />
+
+</LinearLayout>

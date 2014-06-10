@@ -351,6 +351,8 @@ public class ActionManager {
 	
 	private void sendRevier (BaseActivity context, Bundle bundle) {
 		
+//		##
+		
 	}
 	
 	private void mark (BaseActivity context, Bundle bundle) {
